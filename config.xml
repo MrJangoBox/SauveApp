@@ -19,7 +19,7 @@
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     
-    <gap:splash src="img/Default@2x.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="img/Default@2x.png" gap:platform="ios" width="1334" height="750" />
     <gap:config-file platform="ios" parent="UIStatusBarHidden" overwrite="true">
         <true/>
     </gap:config-file>
