@@ -11,6 +11,10 @@ angular.module('sauveApp.controllers', ['sauveApp.services'])
         password: ""
     };
  
+    $rootScope.showMenuButton = function () {
+                return "false";
+            };
+    
     $scope.validateUser = function () {
         var email = this.user.email;
         var password = this.user.password;
@@ -119,6 +123,10 @@ angular.module('sauveApp.controllers', ['sauveApp.services'])
             $rootScope.notify("Oops something went wrong!! Please try again later");
         });
     });
+    
+    $rootScope.showMenuButton = function () {
+                return "true";
+            };
  
     $rootScope.selectCategory = function (category) {
                 $window.location.href="#/base/category"
