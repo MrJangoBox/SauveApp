@@ -44,6 +44,10 @@ angular.module('sauveApp.controllers', ['sauveApp.services'])
         password: "",
         name: ""
     };
+    
+    $rootScope.showMenuButton = function () {
+                return "false";
+            };
  
     $scope.createUser = function () {
         var email = this.user.email;
