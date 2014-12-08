@@ -1,5 +1,6 @@
 angular.module('sauveApp.controllers', ['sauveApp.services'])
  
+// Sign in controller
 .controller('SignInCtrl', function ($rootScope, $scope, API, $window) {
     // if the user is already logged in, take him to his SauveApp app
     if ($rootScope.isSessionActive()) {
@@ -37,7 +38,8 @@ angular.module('sauveApp.controllers', ['sauveApp.services'])
     }
  
 })
- 
+
+// Sign up controller
 .controller('SignUpCtrl', function ($rootScope, $scope, API, $window) {
     $scope.user = {
         email: "",
@@ -80,7 +82,8 @@ angular.module('sauveApp.controllers', ['sauveApp.services'])
         });
     }
 })
- 
+
+// Treatment list controller
 .controller('myListCtrl', function ($rootScope, $scope, API, $timeout, $ionicModal, $window) {
     $rootScope.$on('fetchAll', function(){
             API.getAll($rootScope.getToken()).success(function (data, status, headers, config) {
@@ -142,7 +145,7 @@ angular.module('sauveApp.controllers', ['sauveApp.services'])
  
 })
 
-
+// Category controller
 .controller('categoryCtrl', function ($rootScope, $scope, API, $timeout, $ionicModal, $window) {
     $rootScope.$on('fetchAll', function(){
             API.getAllTopics($rootScope.getToken(),$rootScope.category).success(function (data, status, headers, config) {

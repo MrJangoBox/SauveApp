@@ -7,6 +7,8 @@ angular.module('sauveApp', ['ionic', 'sauveApp.controllers', 'sauveApp.services'
             }
         });
     })
+    
+    // All the paths of the different application views and related controllers
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('auth', {
